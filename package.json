@@ -6,25 +6,26 @@
   "scripts": {
     "test": "npm run build && jest",
     "build": "rm -rf dist/ && tsc",
-    "semantic-release":
-      "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "npm test && lint-staged",
     "cz": "git-cz"
   },
   "repository": {
     "type": "git",
-    "url":
-      "https://github.com/JamesHenry/mongoose-schema-to-typescript-interface.git"
+    "url": "https://github.com/JamesHenry/mongoose-schema-to-typescript-interface.git"
   },
-  "keywords": ["mongoose", "typescript", "schema", "interface"],
+  "keywords": [
+    "mongoose",
+    "typescript",
+    "schema",
+    "interface"
+  ],
   "author": "James Henry <james@henry.sc>",
   "license": "MIT",
   "bugs": {
-    "url":
-      "https://github.com/JamesHenry/mongoose-schema-to-typescript-interface/issues"
+    "url": "https://github.com/JamesHenry/mongoose-schema-to-typescript-interface/issues"
   },
-  "homepage":
-    "https://github.com/JamesHenry/mongoose-schema-to-typescript-interface#readme",
+  "homepage": "https://github.com/JamesHenry/mongoose-schema-to-typescript-interface#readme",
   "devDependencies": {
     "@types/jest": "21.1.8",
     "@types/mongoose": "4.7.29",
@@ -41,8 +42,14 @@
     "typescript-eslint-parser": "10.0.0"
   },
   "lint-staged": {
-    "src/**/*": ["prettier-eslint --write", "git add"],
-    "test/**/*": ["prettier-eslint --write", "git add"]
+    "src/**/*": [
+      "prettier-eslint --write",
+      "git add"
+    ],
+    "test/**/*": [
+      "prettier-eslint --write",
+      "git add"
+    ]
   },
   "config": {
     "commitizen": {
@@ -58,13 +65,17 @@
     "commander": "2.12.2",
     "lodash.camelcase": "4.3.0",
     "lodash.upperfirst": "4.3.1",
-    "mongoose": "4.13.7"
+    "mongoose": "^5.13.14"
   },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.ts$",
-    "moduleFileExtensions": ["ts", "js", "json"]
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
   }
 }
